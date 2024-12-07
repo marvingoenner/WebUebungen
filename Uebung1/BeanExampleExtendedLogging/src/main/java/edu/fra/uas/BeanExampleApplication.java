@@ -15,6 +15,7 @@ public class BeanExampleApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(BeanExampleApplication.class);
 
+	//Bean BeanController wird instanziiert
 	@Autowired
 	private BeanController beanController;
 
@@ -27,6 +28,7 @@ public class BeanExampleApplication {
 		CommandLineRunner action = new CommandLineRunner() {
 			@Override
 			public void run(String... args) throws Exception {
+				//Logging zeichnet Zustände und Ereignsse in Programmen auf
 				log.debug(beanController.putMessage("Hello World"));
 				log.debug(beanController.putMessage("--> OOOHOOO <--"));
 			}

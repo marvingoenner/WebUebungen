@@ -11,6 +11,7 @@ public class BeanController {
     @Autowired
     private MessageService messageService;
 
+    //Übergibt Parameter message an die MessageService Bean 
     public String putMessage(String message) {
         messageService.setMessage(" put messgae: " + message);
         return messageService.getMessage();

@@ -11,6 +11,7 @@ import edu.fra.uas.service.MessageService;
 @SpringBootApplication
 public class BeanExampleApplication {
 
+	//Bereitstellung Bean Objekt, beinhaltet Instanziierung
 	@Autowired
 	private MessageService messageService;
 

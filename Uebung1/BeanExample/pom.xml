@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> <!--Metadaten wie groupId, artefactID, version,...-->
 	<modelVersion>4.0.0</modelVersion>
+	<!-- Version SpringBoot, Paketname,...-->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -27,8 +28,9 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>17</java.version> <!-- java version-->
 	</properties>
+	<!--Dependencies: Bibliotheken oder Frameworks, die das Projekt benötigen-->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,7 +43,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<!-- build Konfigurationen definieren, wie das Projekt gebaut wird und das maven benutzt wird-->
 	<build>
 		<plugins>
 			<plugin>
