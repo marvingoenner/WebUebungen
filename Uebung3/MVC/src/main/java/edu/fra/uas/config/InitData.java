@@ -11,8 +11,10 @@ import jakarta.annotation.PostConstruct;
 @Component
 public class InitData {
 
+    //Logger Instanz für Ausgabe von Debug Infos
     private final Logger log = org.slf4j.LoggerFactory.getLogger(InitData.class);
     
+    //injektion UserService um Benutzer zu erstellen
     @Autowired
     UserService userService;
 
@@ -21,6 +23,7 @@ public class InitData {
         log.debug("### Initialize Data ###");
 
         log.debug("create user admin");
+        //User Initialisieren -> Konstruktor User -> User created without values, anschließend über Setter-Methoden Werte zuordnen
         User user = new User();
         user.setRole("ADMIN");
         user.setFirstName("Administrator");

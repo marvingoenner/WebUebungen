@@ -1,19 +1,22 @@
 <!DOCTYPE html>
+<!-- Thymeleaf ist ein Template Engine für Spring MVC-->
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>User added</title>
     </head>
     <body>
+        <!-- Jedes Attribut mit th:text bindet Eigenschaft des Model-Onjektes an den entsprechenden HTML-Inhalt-->
         <h1>User added</h1>
         <p>User ID: <b th:text="${user.id}">Id</b></p>
         <p>Firstname: <b th:text="${user.firstName}">First Name</b></p>
         <p>Lastname: <b th:text="${user.lastName}">Last Name</b></p>
         <p>Email: <b th:text="${user.email}">Email</b></p>
         <br/>
-        <a href="/list">Back to user list</a>
+        <a href="/list">Back to user list</a> <!--Link zur Userliste-->
         <footer>
             <small id="today"></small>
         </footer>
+        <!-- java Script schreibt das aktuelle Jahr und Datum hinzu-->
         <script>
             var date = new Date();
             var year = date.getFullYear();

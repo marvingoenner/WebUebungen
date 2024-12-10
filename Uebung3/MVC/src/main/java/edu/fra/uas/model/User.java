@@ -1,5 +1,7 @@
 package edu.fra.uas.model;
 
+//Serialisierung ist Prozess, bei dem Objekt oder Datenstruktur in ein Format umgewandelt wird, das gespeichert oder über Netzwerk übertragen werden kann
+//Nach Übertragung kann das Objekt oder die Datenstruktur wieder in den ursprünglichen Zustand
 import java.io.Serializable;
 
 import org.slf4j.Logger;

@@ -24,6 +24,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    //Im Folgenden sind verschiedene Optionen für eine URL, um die View dieses Programms einzusehen
+
     // http://127.0.0.1/
     @RequestMapping
 	public String get() {
@@ -44,13 +46,14 @@ public class UserController {
         return "list.html";
     }
 
+    // Anfrage an folgende URL, dann ausführen der Methode
     // http://127.0.0.1/find?id=1
     @RequestMapping(value = {"/find"}, method = RequestMethod.GET)
     public String find(@RequestParam("id") Long userId, Model model) {
         log.debug("find() is called");
-        User user = userService.getUserById(userId);
-        model.addAttribute("user", user);
-        return "find.html";
+        User user = userService.getUserById(userId); //Sucht user mit angegebener ID
+        model.addAttribute("user", user); //Fügt user dem Model hinzu
+        return "find.html"; //Liefert View find.html
     }
 
     // http://127.0.0.1/add?firstName=Celine&lastName=Clever&email=celine.clever%40example.com&password=123456
