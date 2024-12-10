@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExoneApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.exone.ExoneApplication",
+            "projectName": "exone"
+        },
+        {
+            "type": "java",
             "name": "UserApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.UserApplication",
