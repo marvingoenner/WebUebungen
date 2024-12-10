@@ -11,8 +11,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 //@Service // for business logic
-@Component // managed component
-//@Repository // for persistence
+//@Component // managed component
+@Repository // for persistence
 public class SmallService {
 
 	private static final Logger log = LoggerFactory.getLogger(SmallService.class);
