@@ -24,6 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.fra.uas.model.User;
 import edu.fra.uas.service.UserService;
 
+//Restful WEiterentwicklung zu CRUD, Hauptunterschied Verwendung ResponseEntity
+//ResponseEntity ist Wrapper für Antwort an Client. Beinhaltet: Status, Header, Body; Rückgabewert in den Methoden
 @RestController
 @RequestMapping("/restful")
 public class RestfulController {
