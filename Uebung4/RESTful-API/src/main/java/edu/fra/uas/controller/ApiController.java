@@ -42,6 +42,7 @@ public class ApiController {
 
     private static final int MAX_USERS = 2;
 
+    //Methode list, Ü4, Aufgabe 5
     @GetMapping(value = "/users", 
                 produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody

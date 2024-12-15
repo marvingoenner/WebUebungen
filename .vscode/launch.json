@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExtfourrestApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ExtfourrestApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ExfourrestApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ExfourrestApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "ExtwoApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.extwo.ExtwoApplication",
