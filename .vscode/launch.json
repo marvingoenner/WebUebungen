@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExfourrestApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.exfourrest.ExfourrestApplication",
+            "projectName": "exfourrest"
+        },
+        {
+            "type": "java",
             "name": "ExtfourrestApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.ExtfourrestApplication",
