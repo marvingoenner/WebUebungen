@@ -17,6 +17,7 @@ public class ApiController {
     private Map<Long, Semester> semesters = new HashMap<>();
 
     // ----------------- STUDENTS -----------------
+
     @GetMapping("/students")
     public ResponseEntity<List<Student>> getAllStudents() {
         return students.isEmpty()
@@ -31,8 +32,11 @@ public class ApiController {
                 : ResponseEntity.notFound().build();
     }
 
+    private long nextStudentId=1;
+
     @PostMapping("/students")
     public ResponseEntity<String> addStudent(@RequestBody Student student) {
+        student.setId(nextStudentId++);
         students.put(student.getId(), student);
         return ResponseEntity.status(201).body("Student hinzugefügt.");
     }
@@ -114,6 +118,7 @@ public class ApiController {
         }
         return ResponseEntity.notFound().build();
     }
+
 
     // ----------------- SEMESTERS -----------------
     @GetMapping("/semesters")

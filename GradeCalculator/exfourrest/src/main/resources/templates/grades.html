@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Notenübersicht</title>
+</head>
+<body>
+    <h1>Notenübersicht</h1>
+
+    <!-- Formular zur Eingabe neuer Noten -->
+    <form action="/addGrade" method="POST">
+        <label for="subject">Fach:</label>
+        <input type="text" id="subject" name="subject" required>
+        <br>
+        <label for="grade">Note:</label>
+        <input type="number" step="0.1" id="grade" name="grade" required>
+        <br>
+        <button type="submit">Note hinzufügen</button>
+    </form>
+
+    <!-- Liste der Noten -->
+    <h2>Notenliste</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fach</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="grade : ${grades}">
+                <td th:text="${grade.key}">Fach</td>
+                <td th:text="${grade.value}">Note</td>
+            </tr>
+        </tbody>
+    </table>
+    <div th:if="${#lists.isEmpty(grades)}">
+        <p>Keine Noten vorhanden.</p>
+    </div>
+
+    <!-- Durchschnitt -->
+    <h2>Durchschnitt:</h2>
+    <p th:text="${average > 0 ? average : 'Noch keine Noten vorhanden'}">Durchschnitt</p>
+</body>
+</html>

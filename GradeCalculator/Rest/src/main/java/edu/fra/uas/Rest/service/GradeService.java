@@ -1,4 +1,4 @@
-package edu.fra.uas.extwo.service;
+package edu.fra.uas.Rest.service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -121,3 +121,4 @@ public class GradeService {
         System.out.println("Data cleared");
     }
 }
+
