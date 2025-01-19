@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GradeService } from '../../services/grade.service';
 
 @Component({
   selector: 'app-grade-overview',
-  imports: [],
   templateUrl: './grade-overview.component.html',
-  styleUrl: './grade-overview.component.css'
+  styleUrls: ['./grade-overview.component.css']
 })
-export class GradeOverviewComponent {
+export class GradeOverviewComponent implements OnInit {
+  grades: any[] = [];
 
+  constructor(private gradeService: GradeService) {}
+
+  ngOnInit(): void {
+    this.gradeService.getGrades().subscribe(data => {
+      this.grades = data;
+    });
+  }
 }

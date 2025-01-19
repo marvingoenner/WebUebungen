@@ -1,1 +1,15 @@
-<p>grade-overview works!</p>
+<h1>Notenübersicht</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Fach</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let grade of grades">
+      <td>{{ grade.subject }}</td>
+      <td>{{ grade.grade }}</td>
+    </tr>
+  </tbody>
+</table>
