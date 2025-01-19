@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RestApplication",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.Rest.RestApplication",
+            "projectName": "Rest"
+        },
+        {
+            "type": "java",
             "name": "ExfourrestApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.exfourrest.ExfourrestApplication",
