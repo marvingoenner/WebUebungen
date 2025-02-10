@@ -3,7 +3,7 @@ package com.example.console_http;
 import java.util.List;
 import com.example.console_http.Ingredient;
 
-
+//Rezept Aufbau
 public class Recipe {
     public Long id;
     public String name;
